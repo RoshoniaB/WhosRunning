@@ -1,1 +1,1 @@
-web: gunicorn whosRunning.wsgi
+web: gunicorn running.wsgi
