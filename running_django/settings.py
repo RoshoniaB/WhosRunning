@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'running'
+    'running',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'running',
         'USER': 'runninguser',
         'PASSWORD': 'running',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
     }
 }
 
