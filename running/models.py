@@ -8,3 +8,6 @@ class Running(models.Model):
     social = models.TextField()
     quote = models.TextField()
     position = models.TextField()
+
+    def __str__(self):
+        return self.name, self.picture_url, self.party_affiliation, self.campaign_website, self.social, self.quote, self.position
