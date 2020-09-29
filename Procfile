@@ -1,1 +1,1 @@
-web: gunicorn WHOSRUNNING.wsgi
+web: gunicorn running_django.wsgi
