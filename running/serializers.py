@@ -4,13 +4,14 @@ from .models import Users
 
 
 class RunningSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Running
         fields = '__all__'
 
 
 class UsersSerializer(serializers.ModelSerializer):
-    running = RunningSerializer(many=True)
+    running = RunningSerializer(read_only=True, many=True)
 
     class Meta:
         model = Users
