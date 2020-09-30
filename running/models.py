@@ -10,13 +10,13 @@ class Running(models.Model):
     position = models.TextField()
 
     def __str__(self):
-        return self.name, self.picture_url, self.party_affiliation, self.campaign_website, self.social, self.quote, self.position
+        return f'{self.name}, {self.picture_url}, {self.party_affiliation}, {self.campaign_website}, {self.social}, {self.quote}, {self.position}'
 
 class Users(models.Model):
     name= models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     address = models.TextField()
-    running = models.ManyToManyField(Running )
+    running = models.ManyToManyField(Running, related_name="favorited", blank = True)
 
     def __str__(self):
-        return self.name, self.email, self.address
+        return f'{self.name}, {self.email}, {self.address}'

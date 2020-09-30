@@ -1,13 +1,12 @@
 from rest_framework import serializers
-from .models import Running
-from .models import Users
+from .models import Running, Users
+
 
 
 class RunningSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = Running
-        fields = '__all__'
+        fields = ("id", "name", "picture_url","party_affiliation", "campaign_website", "social", "quote", "position" )
 
 
 class UsersSerializer(serializers.ModelSerializer):
@@ -15,4 +14,4 @@ class UsersSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Users
-        fields = '__all__'
+        fields = ("id", "name", "email", "address", "favorited")
