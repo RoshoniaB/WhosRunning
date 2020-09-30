@@ -11,3 +11,12 @@ class Running(models.Model):
 
     def __str__(self):
         return self.name, self.picture_url, self.party_affiliation, self.campaign_website, self.social, self.quote, self.position
+
+class Users(models.Model):
+    name= models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    address = models.TextField()
+    running = models.ManyToManyField(Running)
+    
+    def __str__(self):
+        return self.name, self.email, self.address
