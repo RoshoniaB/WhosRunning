@@ -8,9 +8,10 @@ class Running(models.Model):
     social = models.TextField()
     quote = models.TextField()
     position = models.TextField()
+    bio = models.TextField()
 
     def __str__(self):
-        return f'{self.name}, {self.picture_url}, {self.party_affiliation}, {self.campaign_website}, {self.social}, {self.quote}, {self.position}'
+        return f'{self.name}, {self.picture_url}, {self.party_affiliation}, {self.campaign_website}, {self.social}, {self.quote}, {self.position}, {self.bio}'
 
 class Users(models.Model):
     name= models.CharField(max_length=100)
